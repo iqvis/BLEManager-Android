@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.iqvis.blecomponent.R;
@@ -33,6 +34,7 @@ Copyright 2016 IQVIS. All rights reserved.
  See the License for the specific language governing permissions and
 limitations under the License.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class BLEScanManager {
 
     private final ArrayList<BluetoothDevice> list = new ArrayList<>();
@@ -69,6 +71,7 @@ public class BLEScanManager {
                 Toast.makeText(Utility.getContext(), Utility.getContext().getString(R.string.text_already_scanning), Toast.LENGTH_LONG).show();
             } else {
                 if (!ManagerFactory.getBleConnectionManager().isConnected()) {
+                    Log.d("STATUS:","Connected");
                 }
                 Toast.makeText(Utility.getContext(), Utility.getContext().getString(R.string.text_scan_start), Toast.LENGTH_SHORT).show();
                 scanLeDevice(true);
@@ -90,7 +93,9 @@ public class BLEScanManager {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
+
                     mLeScanning = false;
+                    //noinspection deprecation
                     adapter.stopLeScan(leScanCallback);
                     ScanCallBack scanCallBack = mScanCallBack;
                     scanCallBack.onScanReturn(getDeviceEntities());
@@ -98,13 +103,15 @@ public class BLEScanManager {
                 }
             }, scan_period);
             mLeScanning = true;
+            //noinspection deprecation
             adapter.startLeScan(leScanCallback);
         } else {
             mLeScanning = false;
+            //noinspection deprecation
             adapter.stopLeScan(leScanCallback);
         }
     }
-    public boolean ismLeScanning() {
+    private boolean ismLeScanning() {
         return mLeScanning;
     }
     private List<BluetoothDevice> getDeviceEntities() {
@@ -115,6 +122,7 @@ public class BLEScanManager {
         return BLElist;
     }
 public void stopLEScan(){
+    //noinspection deprecation
     adapter.stopLeScan(leScanCallback);
 
 }

@@ -16,7 +16,8 @@ Copyright 2016 IQVIS. All rights reserved.
  See the License for the specific language governing permissions and
 limitations under the License.
  */
-public class ServiceEntity {
+@SuppressWarnings("DefaultFileTemplate")
+class ServiceEntity {
     private String specificationName;
     private String specificationType;
     private String AssignedNumber;

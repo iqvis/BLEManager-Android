@@ -1,5 +1,7 @@
 package com.iqvis.blecomponent.factory;
 
+import android.annotation.SuppressLint;
+
 import com.iqvis.blecomponent.manager.BLEScanManager;
 import com.iqvis.blecomponent.manager.BLEConnectionManager;
 
@@ -19,9 +21,11 @@ Copyright 2016 IQVIS. All rights reserved.
  See the License for the specific language governing permissions and
 limitations under the License.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class ManagerFactory {
 
     private static BLEScanManager bleScanManager = null;
+    @SuppressLint("StaticFieldLeak")
     private static BLEConnectionManager bleConnectionManager=null;
 
     public static BLEConnectionManager getBleConnectionManager(){

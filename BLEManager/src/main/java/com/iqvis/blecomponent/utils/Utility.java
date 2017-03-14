@@ -1,6 +1,7 @@
 package com.iqvis.blecomponent.utils;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import java.text.DecimalFormat;
 
@@ -20,8 +21,10 @@ Copyright 2016 IQVIS. All rights reserved.
  See the License for the specific language governing permissions and
 limitations under the License.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class Utility {
 
+    @SuppressLint("StaticFieldLeak")
     private static Context context;
     public static void setContext(Context context) {
         Utility.context = context;
@@ -32,7 +35,7 @@ public class Utility {
 
     private static DecimalFormat format = new DecimalFormat(".##");
 
-    public static String getFormatedValue(double v) {
+    public static String getFormattedValue(double v) {
         return format.format(v);
     }
 

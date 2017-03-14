@@ -18,6 +18,7 @@ Copyright 2016 IQVIS. All rights reserved.
  See the License for the specific language governing permissions and
 limitations under the License.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class BLEDevice  {
     private String name,mac;
     private int rssi;

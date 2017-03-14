@@ -38,6 +38,7 @@ Copyright 2016 IQVIS. All rights reserved.
  See the License for the specific language governing permissions and
 limitations under the License.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class BluetoothLeService extends Service {
     private final static String TAG = BluetoothLeService.class.getSimpleName();
 
@@ -226,7 +227,7 @@ public class BluetoothLeService extends Service {
         if (characteristic.getUuid().equals(UUID_TX_POWER_LEVEL)) {
             int flag = characteristic.getProperties();
             Log.i("Tx_Power_pro", flag + "");
-            int format = -1;
+            int format;
             if ((flag & 0x01) != 0) {
                 format = BluetoothGattCharacteristic.FORMAT_UINT16;
             } else {
@@ -395,13 +396,7 @@ public class BluetoothLeService extends Service {
         mBluetoothGatt = null;
     }
 
-    /**
-     * Request a read on a given {@code BluetoothGattCharacteristic}. The read result is reported
-     * asynchronously through the {@code BluetoothGattCallback#onCharacteristicRead(android.bluetooth.BluetoothGatt, android.bluetooth.BluetoothGattCharacteristic, int)}
-     * callback.
-     *
-     * @param characteristic The characteristic to read from.
-     */
+
 //    public void readCharacteristic(BluetoothGattCharacteristic characteristic) {
 //        if (mBluetoothAdapter == null || mBluetoothGatt == null) {
 //            Log.w(TAG, "BluetoothAdapter not initialized");
@@ -411,12 +406,7 @@ public class BluetoothLeService extends Service {
 //
 //    }
 
-    /**
-     * Enables or disables notification on a give characteristic.
-     *
-     * @param characteristic Characteristic to act on.
-     * @param enabled If true, enable notification.  False otherwise.
-     */
+
 //    public void setCharacteristicNotification(BluetoothGattCharacteristic characteristic,
 //                                              boolean enabled) {
 //        if (mBluetoothAdapter == null || mBluetoothGatt == null) {
@@ -443,7 +433,7 @@ public class BluetoothLeService extends Service {
         return 0;
     }
 
-    final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
+    private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
 
     public static String bytesToHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];
@@ -482,10 +472,10 @@ public class BluetoothLeService extends Service {
     Log.i("RESULT",b+"");
     }
 
-    protected static final UUID CHARACTERISTIC_UPDATE_NOTIFICATION_DESCRIPTOR_UUID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
+    private static final UUID CHARACTERISTIC_UPDATE_NOTIFICATION_DESCRIPTOR_UUID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
 
-    public boolean setCharacteristicNotification(BluetoothGattCharacteristic characteristic,
-                                                 boolean enable) {
+    private boolean setCharacteristicNotification(BluetoothGattCharacteristic characteristic,
+                                                  boolean enable) {
 //        if (IS_DEBUG)
 //            Log.d(TAG, "setCharacteristicNotification(device=" + device.getName() + device.getAddress() + ", UUID="
 //                    + characteristicUuid + ", enable=" + enable + " )");

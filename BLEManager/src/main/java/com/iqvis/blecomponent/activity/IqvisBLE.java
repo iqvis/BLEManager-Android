@@ -34,13 +34,12 @@ Copyright 2016 IQVIS. All rights reserved.
  See the License for the specific language governing permissions and
 limitations under the License.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class IqvisBLE {
     private BluetoothLeService bluetoothLeService;
-    private ScanCallBack scanCallBack;
     private ConnectionCallBack connectionCallBack;
 
     public IqvisBLE(Activity activity, ScanCallBack scanCallBack, ConnectionCallBack connectionCallBack) {
-        this.scanCallBack = scanCallBack;
         this.connectionCallBack = connectionCallBack;
         Activity mActivity = activity;
         ManagerFactory.getBleConnectionManager().init(mActivity);
@@ -132,7 +131,7 @@ public class IqvisBLE {
                         int rssi = intent.getIntExtra(BluetoothLeService.EXTRA_RSSI_VALUE, 0);
                         connectionCallBack.readRssiValues(rssi);
 //                    Toast.makeText(context, rssi+"", Toast.LENGTH_SHORT).show();
-//                        double floatV = Double.parseDouble(Utility.getFormatedValue(Utility.getFloatDistance(rssi, tx)));
+//                        double floatV = Double.parseDouble(Utility.getFormattedValue(Utility.getFloatDistance(rssi, tx)));
                     }
                     break;
                 }

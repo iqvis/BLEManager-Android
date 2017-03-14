@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
@@ -17,8 +18,7 @@ import com.iqvis.blecomponent.utils.GATTConstants;
 
 /**
  * Created by IQVIS on 10/24/2016.
- */
-/*
+
 Copyright 2016 IQVIS. All rights reserved.
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -53,7 +53,7 @@ public class BLEConnectionManager {
     public void startingLeService() {
         Intent serviceIntent = new Intent(activity, BluetoothLeService.class);
         if (serviceConnection != null)
-            activity.bindService(serviceIntent, serviceConnection, activity.BIND_AUTO_CREATE);
+            activity.bindService(serviceIntent, serviceConnection, Context.BIND_AUTO_CREATE);
 
     }
 
