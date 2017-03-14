@@ -1,4 +1,4 @@
-# BLEComponent
+# BLEComponent [![Build Status](https://travis-ci.org/iqvis/BLEManager-Android.svg?branch=master)](https://travis-ci.org/iqvis/BLEManager-Android)
 `BLEComponent` is Bluetooth Low Energy wrapper that scans BLE devices and pair with the BLE device to discover their services, characteristics, and descriptors. It can be used to get RSSI value periodically and scan a specific vendor device by their service UUID.
 ## Requirements
 ` BLEComponent` works on BLE supported devices with following Android OS.
@@ -11,10 +11,10 @@
 `BLEComponent` have many files that can be helpul to scan,pair,discover services,characteristics and descriptors.
 * Open your project in Android studio.
 * Import `BLEComponent` as a module in your Android Studio.
-* Right click on your project and select the option ìOpen Module Settingî. Now you can see the project structure. 
+* Right click on your project and select the option ‚ÄúOpen Module Setting‚Äù. Now you can see the project structure. 
 * Select your project from left side bar under Modules title and multiple option will be open. 
 * Click on dependencies from top bar. 
-* Click the on ì+î button and select the option ìModule dependencyî from right side bar. 
+* Click the on ‚Äú+‚Äù button and select the option ‚ÄúModule dependency‚Äù from right side bar. 
 * Add the BLEComponent as a module.
 
 ## Usage
