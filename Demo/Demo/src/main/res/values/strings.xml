@@ -1,0 +1,16 @@
+<resources>
+    <string name="text_app_name">IqvisBLE Demo</string>
+    <string name="text_devices_list">Devices List</string>
+    <string name="text_rescan">Rescan</string>
+    <string name="text_pair">Pair</string>
+    <!--<string name="text_unpair">Unpair</string>-->
+    <string name="text_ble_not_supported">BLE is not supported</string>
+    <string name ="connect_text">Connect</string>
+    <string name="disconnect_text">Disconnect</string>
+    <string name="device_will_appear_text">Devices will appear here</string>
+    <string name="name_text">Name:</string>
+    <string name="mac_text">MAC</string>
+    <string name="services_text">Services</string>
+    <string name="no_device_found">No Device Found</string>
+    <string name="devices">Devices</string>
+</resources>
