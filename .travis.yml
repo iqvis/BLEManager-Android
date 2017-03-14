@@ -1,0 +1,11 @@
+language: android
+android:
+  
+  components:
+  - tools
+  - build-tools-23.0.3
+  - android-23
+    
+script:
+ - chmod +x ./gradlew
+   

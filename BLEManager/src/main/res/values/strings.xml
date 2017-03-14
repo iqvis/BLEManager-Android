@@ -1,0 +1,5 @@
+<resources>
+    <string name="text_ble_not_enabled">Bluetooth is not enabled in your device</string>
+    <string name="text_already_scanning">Device already scanning\nPlease wait...</string>
+    <string name="text_scan_start">Scan Starts</string>
+</resources>

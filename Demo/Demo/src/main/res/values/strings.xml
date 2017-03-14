@@ -1,0 +1,9 @@
+<resources>
+    <string name="text_app_name">IqvisBLE Demo</string>
+    <string name="text_devices_list">Devices List</string>
+    <string name="text_rescan">Rescan</string>
+    <string name="text_pair">Pair</string>
+    <string name="text_unpair">Unpair</string>
+    <string name="text_ble_not_supported">BLE is not supported</string>
+
+</resources>
