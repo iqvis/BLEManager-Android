@@ -1,4 +1,4 @@
-# BLEComponent
+# BLEManager
 `BLEComponent` is Bluetooth Low Energy wrapper that scans BLE devices and pair with the BLE device to discover their services, characteristics, and descriptors. It can be used to get RSSI value periodically and scan a specific vendor device by their service UUID.
 ## Requirements
 ` BLEComponent` works on BLE supported devices with following Android OS.
